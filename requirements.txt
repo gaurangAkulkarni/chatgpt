@@ -1,0 +1,8 @@
+pandas==1.5.3
+llama-index==0.4.35.post1
+PyPDF2==3.0.1
+pdfminer.six==20221105
+transformers==4.27.2
+boto3==1.26.97
+flask==2.2.3
+asgiref==3.6.0
