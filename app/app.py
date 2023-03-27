@@ -69,7 +69,7 @@ def openai_api_call():  # this is the home page function that generates the page
 async def webhook():
     try:
         req = request.get_json(silent=True, force=True)
-        chat_query = req.get('chat_query')
+        chat_query = req.get('queryText')
         result = fetch_query_data_from_openai(chat_query)
 
         return {
