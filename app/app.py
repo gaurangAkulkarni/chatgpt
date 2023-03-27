@@ -19,9 +19,9 @@ app = Flask(__name__)
 llm=OpenAI(temperature=0, model_name="text-davinci-003", max_tokens=1024)
 memory = ConversationBufferWindowMemory(k=2, memory_key='chat_history', return_messages=True)
 
-constitution_index = GPTSimpleVectorIndex.load_from_disk('./indexes/01Constitution.json')
-lubus_index = GPTSimpleVectorIndex.load_from_disk('./indexes/02Lubus.json')
-covid_index = GPTSimpleVectorIndex.load_from_disk('./indexes/03Covid.json')
+constitution_index = GPTSimpleVectorIndex.load_from_disk('./app/indexes/01Constitution.json')
+lubus_index = GPTSimpleVectorIndex.load_from_disk('./app/indexes/02Lubus.json')
+covid_index = GPTSimpleVectorIndex.load_from_disk('./app/indexes/03Covid.json')
 
 tools = [
     Tool(
